@@ -1,0 +1,26 @@
+﻿@page
+@model IndexModel
+
+<h2>En Büyük Sayıyı Bulma</h2>
+
+<form method="post">
+    <label>1. Sayı:</label>
+    <input type="number" asp-for="Sayi1" required />
+    <br /><br />
+
+    <label>2. Sayı:</label>
+    <input type="number" asp-for="Sayi2" required />
+    <br /><br />
+
+    <label>3. Sayı:</label>
+    <input type="number" asp-for="Sayi3" required />
+    <br /><br />
+
+    <button type="submit">Bul</button>
+</form>
+
+@if (Model.Hesaplandi)
+{
+    <h3>Sonuç</h3>
+    <p>En büyük sayı: @Model.EnBuyuk</p>
+}
