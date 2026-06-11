@@ -1,0 +1,26 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Toplam ve Çarpım";
+}
+
+<h2>İki Sayının Toplamı ve Çarpımı</h2>
+
+<form method="post">
+    <label>1. Sayı:</label>
+    <input type="number" asp-for="Sayi1" />
+    <br /><br />
+
+    <label>2. Sayı:</label>
+    <input type="number" asp-for="Sayi2" />
+    <br /><br />
+
+    <button type="submit">Hesapla</button>
+</form>
+
+@if (Model.Hesaplandi)
+{
+    <h3>Sonuçlar</h3>
+    <p>Toplam: @Model.Toplam</p>
+    <p>Çarpım: @Model.Carpim</p>
+}
