@@ -1,0 +1,18 @@
+﻿@page
+@model IndexModel
+
+<h2>Yaş Kontrolü</h2>
+
+<form method="post">
+    <label>Yaşınızı Giriniz:</label>
+    <input type="number" asp-for="Yas" required />
+    <br /><br />
+
+    <button type="submit">Kontrol Et</button>
+</form>
+
+@if (Model.Hesaplandi)
+{
+    <h3>Sonuç</h3>
+    <p>@Model.Sonuc</p>
+}
