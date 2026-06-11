@@ -1,0 +1,18 @@
+﻿@page
+@model IndexModel
+
+<h2>Tek mi Çift mi?</h2>
+
+<form method="post">
+    <label>Sayı Giriniz:</label>
+    <input type="number" asp-for="Sayi" required />
+    <br /><br />
+
+    <button type="submit">Kontrol Et</button>
+</form>
+
+@if (Model.Hesaplandi)
+{
+    <h3>Sonuç</h3>
+    <p>@Model.Sonuc</p>
+}
