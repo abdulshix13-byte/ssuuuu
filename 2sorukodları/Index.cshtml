@@ -1,0 +1,21 @@
+﻿@page
+@model IndexModel
+
+<h2>Karenin Alanı ve Çevresi</h2>
+
+<form method="post">
+    <label>Kenar Uzunluğu:</label>
+    <input type="number" asp-for="Kenar" required />
+    <br /><br />
+
+    <button type="submit">Hesapla</button>
+</form>
+
+@if (Model.Hesaplandi)
+{
+    <h3>Sonuçlar</h3>
+
+    <p>Kenar: @Model.Kenar</p>
+    <p>Alan: @Model.Alan</p>
+    <p>Çevre: @Model.Cevre</p>
+}
